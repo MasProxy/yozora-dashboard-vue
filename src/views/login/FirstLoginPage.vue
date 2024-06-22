@@ -1,6 +1,14 @@
 <script setup>
+import { ref } from 'vue'
+
 import Button from '@/components/Button.vue'
-import Input from '@/components/Input.vue'
+import Input from '@/components/form/Input.vue'
+import InputLabel from '@/components/form/InputLabel.vue'
+import InputError from '@/components/form/InputError.vue'
+
+const form = ref({
+  email: '',
+})
 </script>
 
 <template>
@@ -16,6 +24,15 @@ import Input from '@/components/Input.vue'
     <Button color="danger"></Button>
   </div>
   <div class="mt-5 pl-5 py-2 apperance-none">
-    <Input />
+    <InputLabel required for="email">test</InputLabel>
+    <Input
+      id="email"
+      v-model="form.email"
+      placeholder="email"
+      class="!w-[250px]"
+      icon="arrow-counterclockwise"
+      type="email"
+      label="test" />
+    <InputError error-message="uhuy" />
   </div>
 </template>
