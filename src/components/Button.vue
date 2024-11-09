@@ -2,7 +2,7 @@
  * Component: Button
  * Author: MasProxy
  * Date Created: 2024-06-10
- * Last Modified: 2024-06-10
+ * Last Modified: 2024-08-28
  * Description: This is a component for render a button.
 -->
 
@@ -82,19 +82,23 @@ const initializeColor = () => {
     switch (props.color) {
       case 'primary':
         finalClass.value +=
-          ' bg-white border border-primary hover:bg-primary hover:text-white text-primary '
+          ' bg-white border border-primary hover:bg-primary hover:text-white text-primary disabled:border-gray-400 disabled:text-gray-400'
         break
       case 'secondary':
         finalClass.value +=
-          ' bg-white border border-secondary hover:bg-secondary text-secondary hover:text-white'
+          ' bg-white border border-secondary hover:bg-secondary text-secondary hover:text-white disabled:border-gray-400 disabled:text-gray-400'
         break
       case 'success':
         finalClass.value +=
-          ' bg-white border border-success hover:bg-success text-success hover:text-white'
+          ' bg-white border border-success hover:bg-success text-success hover:text-white disabled:border-gray-400 disabled:text-gray-400'
         break
       case 'danger':
         finalClass.value +=
-          ' bg-white border border-danger hover:bg-danger hover:text-white text-danger'
+          ' bg-white border border-danger hover:bg-danger hover:text-white text-danger disabled:border-gray-400 disabled:text-gray-400'
+        break
+
+      case 'gray':
+        finalClass.value += ` bg-white border border-gray-500 text-gray-500 hover:border-gray-600 hover:bg-blue-50 disabled:border-gray-400 disabled:text-gray-400`
         break
       default:
         break
@@ -119,16 +123,20 @@ const initializeColor = () => {
   } else {
     switch (props.color) {
       case 'primary':
-        finalClass.value += ' bg-primary hover:bg-primary-hover text-white '
+        finalClass.value +=
+          ' bg-primary hover:bg-primary-hover text-white disabled:bg-gray-200 disabled:text-black'
         break
       case 'secondary':
-        finalClass.value += ' bg-secondary hover:bg-secondary-hover text-white'
+        finalClass.value +=
+          ' bg-secondary hover:bg-secondary-hover text-white disabled:bg-gray-200 disabled:text-black'
         break
       case 'success':
-        finalClass.value += ' bg-success hover:bg-success-hover text-white '
+        finalClass.value +=
+          ' bg-success hover:bg-success-hover text-white disabled:bg-gray-200 disabled:text-black'
         break
       case 'danger':
-        finalClass.value += ' bg-danger hover:bg-danger-hover text-white '
+        finalClass.value +=
+          ' bg-danger hover:bg-danger-hover text-white disabled:bg-gray-200 disabled:text-black'
         break
       case 'none':
         finalClass.value += ' bg-white border-black'

@@ -1,16 +1,23 @@
+<!--
+ * Component: InputError
+ * Author: MasProxy
+ * Date Created: 2024-06-10
+ * Last Modified: 2024-08-17
+ * Description: This is a error message for input field.
+-->
+
 <script setup>
 const props = defineProps({
-  errorMessage: {
+  message: {
     type: String,
     default: '',
     required: true,
   },
 })
-
 </script>
 
 <template>
   <div class="mt-1 text-sm text-danger">
-    {{ errorMessage }}
+    {{ message }}
   </div>
 </template>

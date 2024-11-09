@@ -13,26 +13,14 @@ const form = ref({
 
 <template>
   <div class="p-5">
-    <Button
-      color="danger"
-      class="w-[500px] mr-2"
-      size="xl"
-      href="test"
-      target="_blank">
+    <Button class="w-[500px] mr-2" size="xl" href="test" target="_blank">
       Login
     </Button>
     <Button color="danger"></Button>
   </div>
-  <div class="mt-5 pl-5 py-2 apperance-none">
+  <div class="mt-5 pl-5 py-2">
     <InputLabel required for="email">test</InputLabel>
-    <Input
-      id="email"
-      v-model="form.email"
-      placeholder="email"
-      class="!w-[250px]"
-      icon="arrow-counterclockwise"
-      type="email"
-      label="test" />
-    <InputError error-message="uhuy" />
+    <Input />
+    <InputError message="uhuy" />
   </div>
 </template>
